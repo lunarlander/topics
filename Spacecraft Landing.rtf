@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red206\green59\blue0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u8226 }{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\margb1800\margt1800
+\deftab708
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\f0\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec2 Spacecraft landing\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\strokec0 \
+For the first verision of our implementation we asssuming that aerodynamic and gravitational forces of bodies other than the Moon (Planet) are neglible and that the lateral motion can be ignored. Accordingly, the dececnt trajectory is vertical, and the thrus vector ist tangent to the trajectory. \
+We also assume that the spaceccraft is near the Moon (Planet)  so we can assume that the gravity is a constant, in the case of the Moon 
+\i \expnd0\expndtw0\kerning0
+g = 1,63
+\i0 \expnd0\expndtw0\kerning0
+. To keep it simple  we  use a constant relative velocity of the exhausted gases  relative to our spacecraft and the mass rate m\'91(t) is constraint by 
+\i \expnd0\expndtw0\kerning0
+-\'b5<=m\'91(t)<=0
+\i0 \expnd0\expndtw0\kerning0
+, where 
+\i \expnd0\expndtw0\kerning0
+\'b5
+\i0 \expnd0\expndtw0\kerning0
+ is a constant and gives the maximum rate of change of mass due burining the fuel\
+\
+Notation:\
+\pard\tx20\tx200\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\li180\fi-180\pardirnatural
+\ls1\ilvl0{\listtext	\'95	}t is time\
+{\listtext	\'95	}m(t) is the mass of the spacecraft, which varies as fuel is burned.\
+{\listtext	\'95	}m\'91(t) is the rate of change of mass, constraint by 
+\i \expnd0\expndtw0\kerning0
+-\'b5<=m\'91(t)<=0\
+\ls1\ilvl0
+\i0 \expnd0\expndtw0\kerning0
+{\listtext	\'95	}
+\i \expnd0\expndtw0\kerning0
+g=1,63, t
+\i0 \expnd0\expndtw0\kerning0
+he gravitational constant near the Moon\
+{\listtext	\'95	}
+\i \expnd0\expndtw0\kerning0
+k i
+\i0 \expnd0\expndtw0\kerning0
+s a constant, the relative velocity of the exhausted gases with respect to the spacecraft\
+{\listtext	\'95	}T(t) = -km\'91(t), the thrust \
+{\listtext	\'95	}h(t) is the height, with h(t) >= 0\
+{\listtext	\'95	}v(t) = h\'91(t), the velocity of the spacecraft\
+{\listtext	\'95	}u(t) = m\'91(t) the control function \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+\
+The descent trajectory of our spacecraft is vertical and the thrust vector is perpendicular to the ground.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b\fs28 \expnd0\expndtw0\kerning0
+Equations of Motion\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0\fs24 \expnd0\expndtw0\kerning0
+According to Newton\'91s second law \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i \expnd0\expndtw0\kerning0
+m(t)h\'b4\'b4(t)=-gm(t) + T(t) = - gm(t) - km\'b4(t)  \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0 \expnd0\expndtw0\kerning0
+With our Notations: \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i \expnd0\expndtw0\kerning0
+h\'91(t) = v(t)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0 \expnd0\expndtw0\kerning0
+v
+\i \expnd0\expndtw0\kerning0
+\'91(t) = -g-k u(t) / m(t)\
+m\'91(t)=u(t)}
