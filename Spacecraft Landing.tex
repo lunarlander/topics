@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\begin{document}
+
+\title{Spacecraft Landing}
+\author{Andreas Hiltenkamp}
+\date{Feb. 28th 2013}
+\maketitle
+
+\paragraph{Spacecraft landing}
+For the first version of our implementation we assuming that aerodynamic and gravitational forces of bodies other than the Moon (Planet) are neglible and that the lateral motion can be ignored. Accordingly, the decent trajectory is vertical, and the thrust vector is tangent to the trajectory.
+We also assume that the spacecraft is near the Moon (planet) so we can assume that the gravity is a constant, in the case of the Moon $g = 1,63 \frac{m}{s^2}$. To keep it simple we use a constant relative velocity of the exhausted gases relative to our spacecraft and the mass rate $\dot m(t)$ is constraint by $-\mu<=\dot(m)(t)<=0$, where $\mu$ is a constant and gives the maximum rate of change of mass due burning the fuel.\\
+Notation:
+\begin{itemize}
+\item $f$  Graviation constant $= 6,673 10^{-11} \frac{N \cdot m^2}{kg^2}$
+\item $g$ is the gravity acceleration. Near the surface of a planet it can be treated as constant.
+     For the Moon $g=1,63 \frac{m}{s^2}$. 
+\item $t$ is time
+\item $m(t) = m_0 + m_f(t)$ is the mass of the spacecraft, which varies as fuel is burned. With  $m_0$  the mass of the empty spacecraft and $m_f(t)$ the mass of the fuel. 
+\item $\frac{dm(t)}{dt}=\dot m$ is the rate of change of mass, constraint by $-\mu\leq\dot m\leq0$
+\item $k$ is a constant, the relative velocity of the exhausted gases with respect to the spacecraft.
+\item $T(t) =  -k\dot m$, the thrust.
+\item $h(t)$ is the distance from the planet's  surface, with $h(t) \geq 0$.
+\item $v(t) = \frac{dh}{dt}=\dot h(t)$, the velocity of the spacecraft.
+\item $a(t) =  \frac{dv}{dt} = \frac{d}{dt}\frac{d}{dt} h = \ddot h$  is the acceleration of the spacecraft.
+\item $u(t) = \frac{d}{dt} m=\dot m(t)$ the control function
+\end{itemize}
+The descent trajectory of our spacecraft is vertical and the thrust vector is perpendicular to the ground.
+
+\includegraphics*{Lunar_Lander}
+
+
+\paragraph{Equations of Motion}
+
+According to NewtonÔs second law
+\begin{equation}
+m(t) \ddot h(t)=-g m(t) + T(t) = - g m(t) - k\dot m(t)
+\end{equation}
+With our Notations:\\
+\begin{equation}
+\dot h(t) = v(t)
+\end{equation}
+\begin{equation}
+\dot v(t) = -g-k \cdot \frac{u(t)}{m(t)}
+\end{equation}
+\begin{equation}
+\dot m(t) = u(t)
+\end{equation}
+
+\end{document}
